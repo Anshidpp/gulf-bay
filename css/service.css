@@ -7,6 +7,31 @@ body {
   color: var(--text-color);
   line-height: 1.6;
 }
+.service-logistic-breadcrumb {
+  background: url('../assets/service-img/banner1.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 4rem 0; /* more height */
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* optional: dark overlay for readability */
+.service-logistic-breadcrumb::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* semi-transparent overlay */
+  z-index: 0;
+}
+
+.service-logistic-breadcrumb .service-logistic-container {
+  position: relative;
+  z-index: 1;
+}
 
 h1, h2, h3 {
   color: var(--secondary-color);
@@ -29,7 +54,7 @@ a:hover {
 }
 
 /* Breadcrumb */
-.service-logistic-breadcrumb {
+/* .service-logistic-breadcrumb {
   background: var(--light-gray);
   padding: 2rem 0;
   text-align: center;
@@ -37,7 +62,7 @@ a:hover {
 
 .service-logistic-breadcrumb h1 {
   margin-bottom: 0.5rem;
-}
+} */
 /* Services Section */
 .service-section {
   /* padding: 60px 20px; */
@@ -183,6 +208,8 @@ a:hover {
 
 .service-logistic-images img {
   flex: 1;
+  width: 200px;
+  height: 300px;
   border-radius: 8px;
 }
 
@@ -218,7 +245,7 @@ a:hover {
   background: #e68a00;
 }
 .service-logistic-layout {
-  display: flex;
+  /* display: flex; */
   gap: 20px;
 }
 
@@ -364,7 +391,14 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .service-logistic-images {
+  
+}
+@media (max-width: 600px) {
+.service-logistic-images {
     flex-direction: column;
+  }
+  .service-logistic-images img{
+    width: 200px;
+    height: 200px;
   }
 }
