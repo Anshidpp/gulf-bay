@@ -1,0 +1,159 @@
+@import url('colour.css');
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+.service-logistic-breadcrumb {
+  background: var(--light-gray);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.service-logistic-breadcrumb h1 {
+  margin-bottom: 0.5rem;
+}
+.about-us-logistic {
+  padding: 40px 20px;
+}
+
+.about-us-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-us-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.about-us-sidebar {
+  flex: 1;
+  max-width: 280px;
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.about-us-sidebar img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-us-profile-card h3 {
+  margin: 15px 0 5px;
+}
+
+.about-us-profile-card p {
+  color: #777;
+  font-size: 14px;
+}
+
+.about-us-social-links a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.about-us-contact-info,
+.about-us-business-hours ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.about-us-business-hours h4 {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Main Content */
+.about-us-details {
+  flex: 2.5;
+}
+
+.about-us-details h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.about-us-details h3 {
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+
+.about-us-details p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-us-list-check {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.about-us-list-check li {
+  margin: 5px 0;
+  padding-left: 22px;
+  position: relative;
+}
+
+.about-us-list-check li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff9900;
+}
+
+.about-us-images {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.about-us-images img {
+  width: 48%;
+  border-radius: 8px;
+}
+
+/* Accordion */
+.about-us-accordion {
+  margin: 25px 0;
+}
+
+.about-us-accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.about-us-accordion-item button {
+  width: 100%;
+  padding: 15px;
+  background: #f6f6f6;
+  color: #333;
+  border: none;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.about-us-accordion-item.about-us-active button {
+  background: #ff9900;
+  color: #fff;
+}
+
+.about-us-accordion-content {
+  display: none;
+  padding: 15px;
+  background: #fafafa;
+}
+
+.about-us-accordion-item.about-us-active .about-us-accordion-content {
+  display: block;
+}
