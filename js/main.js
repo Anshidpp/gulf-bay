@@ -1,27 +1,38 @@
 // ..... Responsive navbar ............
 
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.hamburger i');
-  const mobileMenu = document.querySelector('.mobile-menu');
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger i");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const navbar = document.querySelector(".nav-main");
+  const logo = document.querySelector(".nav-logo img");
 
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
+  // Mobile menu toggle
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
 
-    // Add rotate animation
-    hamburger.classList.add('rotate');
+    hamburger.classList.add("rotate");
 
     setTimeout(() => {
-      if (mobileMenu.classList.contains('active')) {
-        hamburger.classList.remove('fa-bars');
-        hamburger.classList.add('fa-times');
+      if (mobileMenu.classList.contains("active")) {
+        hamburger.classList.remove("fa-bars");
+        hamburger.classList.add("fa-times");
       } else {
-        hamburger.classList.remove('fa-times');
-        hamburger.classList.add('fa-bars');
+        hamburger.classList.remove("fa-times");
+        hamburger.classList.add("fa-bars");
       }
+      hamburger.classList.remove("rotate");
+    }, 200);
+  });
 
-      // Remove rotate after change
-      hamburger.classList.remove('rotate');
-    }, 200); // half the animation time
+  // Nav Scroll effect
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+      logo.src = "./assets/logo-img/LOGO1.png"; // new logo when scrolled
+    } else {
+      navbar.classList.remove("scrolled");
+      logo.src = "./assets/logo-img/LOGO2.png"; // default logo
+    }
   });
 });
 
@@ -58,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+
+// .......... FAQ  ............
 
 
 document.addEventListener('DOMContentLoaded', function () {

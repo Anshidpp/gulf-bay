@@ -1,100 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* -------------------------------------------- Nav ------------------------------------ */
 
-.nav-main{
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 999;
-}
-.nav-logo{
-    /* width: 200px; */
-    padding-left: 40px;
+.nav-main {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  transition: background 0.3s ease;
 }
 
-.nav-logo img{
-    width: 15rem;
+/* Navbar after scrolling */
+.nav-main.scrolled {
+  background: #ffffff; /* change background on scroll */
 }
+
+/* Optional: if you want the text color to change */
+.nav-main.scrolled .nav-pages ul li {
+  color: rgb(0, 0, 0);
+}
+.nav-logo {
+  /* width: 200px; */
+  padding-left: 40px;
+}
+
+.nav-logo img {
+  width: 15rem;
+}
+
 .nav-pages {
   display: block;
   padding-right: 100px;
 }
+
 .hamburger {
   display: none;
   padding-right: 20px;
   user-select: none;
 }
+
 .hamburger i {
   font-size: 28px;
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease; /* animate rotation + fade */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* animate rotation + fade */
   color: white;
 }
 
 /* Rotate when menu is active */
 .hamburger i.rotate {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
   opacity: 0.7;
 }
-.nav-pages ul{
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    font-family: "Noto Sans", sans-serif;
-}
-.nav-pages ul li{
-    cursor: pointer;
-    color: white;
+
+.nav-pages ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  font-family: "Noto Sans", sans-serif;
 }
 
-.nav-pages a{
+.nav-pages ul li {
+  cursor: pointer;
+  color: white;
+}
+
+.nav-pages a {
   text-decoration: none;
 }
 
 .mobile-menu {
   position: fixed;
-  top: 0;
-  right: -300px; /* hidden off-screen */
-  width: 250px;
-  height: 100%;
-  background: #204385;
+  top: -200%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: var(--primary-color);
   color: white;
-  transition: right 0.3s ease-in-out;
-  padding: 80px 20px; /* to avoid navbar overlap */
+  transition: top 0.3s ease-in-out;
+  padding: 100px 20px;
   z-index: 998;
+  font-family: "Noto Sans", sans-serif;
 }
+
+.mobile-menu.active {
+  top: 0;
+}
+
 
 .mobile-menu ul {
   list-style: none;
   padding: 0;
 }
+
+.mobile-menu a {
+  text-decoration: none;
+  color: white;
+}
+
 .mobile-menu ul li {
-  margin: 20px 0;
+  margin: 30px 0;
   font-size: 18px;
   cursor: pointer;
+  
 }
 
 /* Active state */
-.mobile-menu.active {
-  right: 0;
-}
+
 
 @media (max-width: 750px) {
   .nav-pages {
-    display: none; /* hide desktop nav */
+    display: none;
+    /* hide desktop nav */
   }
+
   .hamburger {
-    display: block; /* show hamburger */
+    display: block;
+    /* show hamburger */
   }
-  .nav-logo{
+
+  .nav-logo {
     padding-left: 0;
   }
 }
@@ -102,25 +135,31 @@
 
 /* ---------------------------------------------------------- Home -------------------------------------------- */
 
-     /* HOME */
-    .home-main{
-      width:100%;
-      /* set a real height so absolutely positioned children have space */
-      height:650px;
-      max-height:650px;
-      overflow:hidden;
-      position:relative;
-    }
-    /* responsive tweak */
-    @media (max-width:900px){ .home-main{ height:80vh; max-height:none } }
+/* HOME */
+.home-main {
+  width: 100%;
+  /* set a real height so absolutely positioned children have space */
+  height: 650px;
+  max-height: 650px;
+  overflow: hidden;
+  position: relative;
+}
 
-    .home-bk-img{
-      position:relative;
-      width:100%;
-      height:100%;
-    }
+/* responsive tweak */
+@media (max-width:900px) {
+  .home-main {
+    height: 80vh;
+    max-height: none
+  }
+}
 
-    .home-bk-img img {
+.home-bk-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.home-bk-img img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -129,12 +168,14 @@
   opacity: 0;
   transition: opacity 1s ease-in-out;
   pointer-events: none;
-  z-index: 0;   /* 👈 keep images in the back */
+  z-index: 0;
+  /* 👈 keep images in the back */
 }
 
 .home-bk-img img.active {
   opacity: 1;
-  z-index: 0;   /* 👈 stay behind content */
+  z-index: 0;
+  /* 👈 stay behind content */
 }
 
 .home-content-main {
@@ -144,7 +185,8 @@
   background-color: rgba(0, 0, 0, 0.351);
   top: 0;
   left: 0;
-  z-index: 1;   /* 👈 put content above images */
+  z-index: 1;
+  /* 👈 put content above images */
   display: flex;
   align-items: center;
   justify-content: center;
