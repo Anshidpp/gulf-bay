@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Nav Scroll effect
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 100) {
       navbar.classList.add("scrolled");
       logo.src = "./assets/logo-img/LOGO1.png"; // new logo when scrolled
     } else {
