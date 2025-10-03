@@ -289,51 +289,79 @@
             </div>
         </aside>
         <section class="faq">
-  <h2 class="faq-title">Logistics FAQ</h2>
+            <h2 class="faq-title">Logistics FAQ</h2>
 
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>+</span>
-      What logistics services do you provide?
-    </div>
-    <div class="faq-answer">
-      We provide land transport, ocean freight, air freight, and intercontinental shipping solutions, along with warehouse and supply chain management.
-    </div>
-  </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>+</span>
+                    What logistics services do you provide?
+                </div>
+                <div class="faq-answer">
+                    We provide land transport, ocean freight, air freight, and intercontinental shipping solutions,
+                    along with warehouse and supply chain management.
+                </div>
+            </div>
 
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>+</span>
-      How can I track my shipment?
-    </div>
-    <div class="faq-answer">
-      You can track your shipment using the tracking ID provided at the time of booking through our online tracking portal.
-    </div>
-  </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>+</span>
+                    How can I track my shipment?
+                </div>
+                <div class="faq-answer">
+                    You can track your shipment using the tracking ID provided at the time of booking through our online
+                    tracking portal.
+                </div>
+            </div>
 
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>+</span>
-      Do you offer international shipping?
-    </div>
-    <div class="faq-answer">
-      Yes, we offer global logistics solutions covering all major international trade routes with customs clearance support.
-    </div>
-  </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>+</span>
+                    Do you offer international shipping?
+                </div>
+                <div class="faq-answer">
+                    Yes, we offer global logistics solutions covering all major international trade routes with customs
+                    clearance support.
+                </div>
+            </div>
 
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>+</span>
-      What are your payment options?
-    </div>
-    <div class="faq-answer">
-      We accept online payments, bank transfers, and corporate accounts for recurring logistics needs.
-    </div>
-  </div>
-</section>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>+</span>
+                    What are your payment options?
+                </div>
+                <div class="faq-answer">
+                    We accept online payments, bank transfers, and corporate accounts for recurring logistics needs.
+                </div>
+            </div>
+        </section>
 
 
     </div>
+
+    <div class="image-box">
+        <img src="./assets/service-img/airbus-bgrm.png" alt="Airbus">
+    </div>
+    <script>
+        const card = document.querySelector('.service-card');
+        const plane = document.querySelector('.image-box img');
+        const planeSound = new Audio('./assets/sound/airplane.mp3');
+        planeSound.preload = 'auto';
+
+        let hasFlown = false; // reset on each page reload
+
+        card.addEventListener('mouseenter', () => {
+            if (!hasFlown) {
+                plane.classList.remove('fly-animation'); // reset animation
+                void plane.offsetWidth;                  // trigger reflow
+                plane.classList.add('fly-animation');   // start flying
+                planeSound.currentTime = 0;
+                planeSound.play().catch(err => console.log('Sound play failed:', err));
+
+                hasFlown = true; // ensure animation + sound happens only once per hover
+            }
+        });
+    </script>
+
     <script src="./js/main.js"></script>
 </body>
 

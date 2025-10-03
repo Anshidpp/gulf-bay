@@ -338,11 +338,19 @@
       }
       
       .about-us-profile-card {
-        flex-direction: column;
+        /* flex-direction: column; */
         text-align: center;
       }
     }
-
+@media (max-width: 400px){
+.about-us-profile-info{
+  min-width: 100%;
+}
+.about-us-profile-card img{
+  width: 100%;
+  height: 200px
+}
+}
     @media (max-width: 576px) {
       .service-logistic-breadcrumb {
         padding: 2rem 0;
