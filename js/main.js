@@ -30,30 +30,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ..... auto carousel ............
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const images = document.querySelectorAll('.home-bk-img img');
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.home-bk-img img');
 
-      if (!images.length) {
-        console.error('Carousel: no images found. Check selector and image paths.');
-        return;
-      }
+  if (!images.length) {
+    console.error('Carousel: no images found. Check selector and image paths.');
+    return;
+  }
 
-      // Optional: log how many images found
-      // console.log('Carousel images found:', images.length);
+  // Optional: log how many images found
+  // console.log('Carousel images found:', images.length);
 
-      let index = 0;
-      const intervalMs = 4000; // change speed here
+  let index = 0;
+  const intervalMs = 4000; // change speed here
 
-      // make sure first image visible
-      images.forEach(img => img.classList.remove('active'));
+  // make sure first image visible
+  images.forEach(img => img.classList.remove('active'));
+  images[index].classList.add('active');
+
+  // safe interval (won't run if only one image)
+  if (images.length > 1) {
+    setInterval(() => {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
       images[index].classList.add('active');
+    }, intervalMs);
+  }
+});
 
-      // safe interval (won't run if only one image)
-      if (images.length > 1) {
-        setInterval(() => {
-          images[index].classList.remove('active');
-          index = (index + 1) % images.length;
-          images[index].classList.add('active');
-        }, intervalMs);
-      }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+
+    question.addEventListener('click', () => {
+      // Close all other items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+        }
+      });
+
+      // Toggle current item
+      item.classList.toggle('active');
     });
+  });
+});

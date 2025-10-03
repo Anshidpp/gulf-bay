@@ -399,6 +399,7 @@
         @media (max-width: 576px) {
             .service-logistic-breadcrumb {
                 padding: 3rem 0;
+                padding-top: 80px;
             }
             
             .service-logistic-breadcrumb h1 {
