@@ -1,159 +1,365 @@
 @import url('colour.css');
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #333;
-}
-.service-logistic-breadcrumb {
-  background: var(--light-gray);
-  padding: 2rem 0;
-  text-align: center;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.service-logistic-breadcrumb h1 {
-  margin-bottom: 0.5rem;
-}
-.about-us-logistic {
-  padding: 40px 20px;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+    }
 
-.about-us-container {
-  max-width: 1200px;
-  margin: auto;
-}
+    .service-logistic-breadcrumb {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 3rem 0;
+      text-align: center;
+      color: white;
+    }
 
-.about-us-content {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-}
+    .service-logistic-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-/* Sidebar */
-.about-us-sidebar {
-  flex: 1;
-  max-width: 280px;
-  background: #f9f9f9;
-  padding: 20px;
-  border: 1px solid #ddd;
-}
+    .service-logistic-breadcrumb h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
 
-.about-us-sidebar img {
-  width: 100%;
-  border-radius: 8px;
-}
+    .service-logistic-breadcrumb p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
 
-.about-us-profile-card h3 {
-  margin: 15px 0 5px;
-}
+    .about-us-logistic {
+      padding: 60px 20px;
+    }
 
-.about-us-profile-card p {
-  color: #777;
-  font-size: 14px;
-}
+    .about-us-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.about-us-social-links a {
-  margin-right: 10px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #333;
-}
+    .about-us-content {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
 
-.about-us-contact-info,
-.about-us-business-hours ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
+    /* Sidebar Styles */
+    .about-us-sidebar {
+      flex: 1;
+      max-width: 320px;
+    }
 
-.about-us-business-hours h4 {
-  margin-top: 20px;
-  font-size: 16px;
-  font-weight: bold;
-}
+    .about-us-profile-card {
+      background: var(--bg-color);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      padding: 25px;
+      text-align: center;
+      /* border-top: 4px solid var(--primary-color); */
+    }
 
-/* Main Content */
-.about-us-details {
-  flex: 2.5;
-}
+    .about-us-profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 14px;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 1px solid var(--primary-color);
+    }
 
-.about-us-details h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
+    .about-us-profile-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      color: var(--secondary-color);
+    }
 
-.about-us-details h3 {
-  font-size: 20px;
-  margin: 20px 0 10px;
-}
+    .about-us-profile-card p {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
 
-.about-us-details p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
+    .about-us-social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
 
-.about-us-list-check {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0;
-}
+    .about-us-social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: var(--light-gray);
+      border-radius: 50%;
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
 
-.about-us-list-check li {
-  margin: 5px 0;
-  padding-left: 22px;
-  position: relative;
-}
+    .about-us-social-links a:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-3px);
+    }
 
-.about-us-list-check li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #ff9900;
-}
+    .about-us-contact-info {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+      text-align: left;
+    }
 
-.about-us-images {
-  display: flex;
-  gap: 20px;
-  margin: 20px 0;
-}
+    .about-us-contact-info li {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+    }
 
-.about-us-images img {
-  width: 48%;
-  border-radius: 8px;
-}
+    .about-us-contact-info li:last-child {
+      border-bottom: none;
+    }
 
-/* Accordion */
-.about-us-accordion {
-  margin: 25px 0;
-}
+    .about-us-business-hours {
+      margin-top: 25px;
+      text-align: left;
+    }
 
-.about-us-accordion-item {
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-}
+    .about-us-business-hours h4 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: var(--secondary-color);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-color);
+    }
 
-.about-us-accordion-item button {
-  width: 100%;
-  padding: 15px;
-  background: #f6f6f6;
-  color: #333;
-  border: none;
-  text-align: left;
-  font-weight: bold;
-  cursor: pointer;
-}
+    .about-us-business-hours ul {
+      list-style: none;
+      padding: 0;
+    }
 
-.about-us-accordion-item.about-us-active button {
-  background: #ff9900;
-  color: #fff;
-}
+    .about-us-business-hours li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
 
-.about-us-accordion-content {
-  display: none;
-  padding: 15px;
-  background: #fafafa;
-}
+    .about-us-business-hours li:last-child {
+      border-bottom: none;
+    }
 
-.about-us-accordion-item.about-us-active .about-us-accordion-content {
-  display: block;
-}
+    /* Main Content Styles */
+    .about-us-details {
+      flex: 2.5;
+    }
+
+    .about-us-details h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--secondary-color);
+      line-height: 1.3;
+    }
+
+    .about-us-details h3 {
+      font-size: 1.5rem;
+      margin: 30px 0 15px;
+      color: var(--secondary-color);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    .about-us-details p {
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .about-us-list-check {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .about-us-list-check li {
+      margin: 12px 0;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .about-us-list-check li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    .about-us-images {
+      display: flex;
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .about-us-images img {
+      width: 48%;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .about-us-images img:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Accordion Styles */
+    .about-us-accordion {
+      margin: 30px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .about-us-accordion-item {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .about-us-accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    .about-us-accordion-item button {
+      width: 100%;
+      padding: 18px 20px;
+      background: var(--light-gray);
+      color: var(--secondary-color);
+      border: none;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .about-us-accordion-item button::after {
+      content: "+";
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+
+    .about-us-accordion-item.about-us-active button {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .about-us-accordion-item.about-us-active button::after {
+      content: "-";
+    }
+
+    .about-us-accordion-content {
+      display: none;
+      padding: 20px;
+      background: var(--light-gray);
+      line-height: 1.7;
+    }
+
+    .about-us-accordion-item.about-us-active .about-us-accordion-content {
+      display: block;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .about-us-content {
+        flex-direction: column;
+      }
+      
+      .about-us-sidebar {
+        max-width: 100%;
+        width: 100%;
+      }
+      
+      .about-us-profile-card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: left;
+      }
+      
+      .about-us-profile-card img {
+        margin: 0;
+      }
+      
+      .about-us-profile-info {
+        flex: 1;
+        min-width: 200px;
+      }
+      
+      .about-us-contact-info, 
+      .about-us-business-hours {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .service-logistic-breadcrumb h1 {
+        font-size: 2rem;
+      }
+      
+      .about-us-images {
+        flex-direction: column;
+      }
+      
+      .about-us-images img {
+        width: 100%;
+      }
+      
+      .about-us-profile-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .service-logistic-breadcrumb {
+        padding: 2rem 0;
+      }
+      
+      .service-logistic-breadcrumb h1 {
+        font-size: 1.8rem;
+      }
+      
+      .about-us-logistic {
+        padding: 40px 15px;
+      }
+      
+      .about-us-details h2 {
+        font-size: 1.5rem;
+      }
+      
+      .about-us-details h3 {
+        font-size: 1.3rem;
+      }
+    }
