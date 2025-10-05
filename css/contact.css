@@ -97,12 +97,13 @@ body {
     display: flex;
 }
 .contact-content-left{
-    width: 40%;
+    /* width: 40%; */
     height: auto;
     /* background-color: turquoise; */
     display: flex;
     flex-direction: column;
     gap: 35px;
+    padding-right: 5px;
 }
 .contact-content-left h2{
     font-size: 60px;
@@ -131,8 +132,8 @@ body {
     box-shadow: var(--shadow);
 }
 .contact-p{
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    /* font-weight: 500; */
 }
 
 .contact-content-right{
