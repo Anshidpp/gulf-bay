@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.contact-main {
+    width: 100%;
+    height: auto;
+    /* background-color: violet; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ------------------------------------------ head image ---------------------------------------------------- */
+
+.service-logistic-breadcrumb {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../assets/conatct-img/post-17@2x.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+    padding-top: 80px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.service-logistic-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-logistic-breadcrumb h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.service-logistic-breadcrumb p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.service-logistic-breadcrumb a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-logistic-breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .service-logistic-container {
+        width: 100%;
+    }
+
+    .service-logistic-breadcrumb h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-logistic-breadcrumb {
+        padding: 3rem 0;
+        padding-top: 80px;
+    }
+
+    .service-logistic-breadcrumb h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ------------------------------------------ contact ---------------------------------------------------- */
+
+
+.contact-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.contact-content-main{
+    width: 90%;
+    height: auto;
+    /* background-color: yellow; */
+    display: flex;
+}
+.contact-content-left{
+    width: 40%;
+    height: auto;
+    /* background-color: turquoise; */
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.contact-content-left h2{
+    font-size: 60px;
+    color: var(--secondary-color);
+}
+.contact-content-left ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.contact-content-left ul li{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.contact-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+.contact-p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact-content-right{
+    width: 60%;
+    height: auto;
+    /* background-color: wheat; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.contact-content-right h3{
+    font-size: 20px;
+}
+
+.contact-content-right p{
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.contact-form{
+    width: 100%;
+    height: auto;
+    /* background-color: slategray; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 5px;
+}
+.contat-input-mult{
+    width: 80%;
+    /* background-color: aquamarine; */
+    display: flex;
+    gap: 15px;
+}
+
+.contat-input-mult input{
+    width: 45%;
+    height: 15px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}
+.contat-input-sin{
+    width: 80%;
+    /* background-color: aquamarine; */
+}
+
+.contat-input-sin input{
+    width: 95%;
+    height: 15px;
+    border: 1px solid var(--border-color);
+    padding: 12px;
+}
+
+.contat-input-sin textarea{
+    width: 95%;
+    height: 60px;
+    border: 1px solid var(--border-color);
+    padding: 12px;
+}
+.contact-form button{
+    width: 79%;
+    height: 35px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
