@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --primary-color: #ff9900;
   --secondary-color: #111111;
   --text-color: #333333;
@@ -6,4 +6,18 @@
   --light-gray: #f7f7f7;
   --border-color: #e0e0e0;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+} */
+
+/* it okay */
+:root {
+  --primary-color: #8DC63F; 
+  --secondary-color: #1E2A2D;
+  --text-color: #222222; 
+  --bg-color: #F5F7F6; 
+  --light-gray: #D9E1E0; 
+  --border-color: #B5C9B8; 
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+
+
+

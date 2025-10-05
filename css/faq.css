@@ -1,13 +1,5 @@
-:root {
-  --primary-color: #ff9900;
-  --secondary-color: #111111;
-  --text-color: #333333;
-  --bg-color: #ffffff;
-  --light-gray: #f7f7f7;
-  --border-color: #e0e0e0;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
 
+@import url('colour.css');
 .faq {
   max-width: 100%;
   margin: 0 auto;
@@ -16,7 +8,6 @@
   box-shadow: var(--shadow);
   padding: 40px;
 }
-
 .faq-title {
   color: var(--secondary-color);
   margin-bottom: 30px;
