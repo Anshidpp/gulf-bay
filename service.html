@@ -28,7 +28,7 @@
                 <a href="./service.html">
                     <li>Services</li>
                 </a>
-                <a href="">
+                <a href="./contact.html">
                     <li>Contact Us</li>
                 </a>
                 <!-- <li>Blog</li> -->
@@ -52,7 +52,7 @@
             <a href="./service.html">
                 <li>Services</li>
             </a>
-            <a href="">
+            <a href="./contact.html">
                 <li>Contact Us</li>
             </a>
             <!-- <li>Blog</li> -->
@@ -338,6 +338,52 @@
 
 
     </div>
+    <!-- -------------------------------------------- Footer -------------------------------------------------- -->
+
+    <div class="footer-main">
+        <div class="footer-container">
+            <div class="footer-logo-content">
+                <img src="assets/logo-img/LOGO2.png" alt="">
+                <p>ExLogistics, your trusted business partner, has developed a suite of powerful tools designed to take
+                    your business to the next level.</p>
+            </div>
+            <div class="footer-quick-links">
+                <p>Quick Links</p>
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="service.html">
+                        <li>Service</li>
+                    </a>
+                    <a href="">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p>Contact</p>
+                <ul>
+                    <li><i class="fa-solid fa-paper-plane" style="color: #e77707;"></i> abcde@gmail.com</li>
+                    <li><i class="fa-solid fa-phone" style="color: #e77707;"></i> +971 52 226 3845</li>
+                    <li><i class="fa-solid fa-location-dot" style="color: #e77707;"></i> 14th Street, UAE</li>
+                </ul>
+            </div>
+            <div class="footer-social-media">
+                <a href=""><i class="fa-brands fa-instagram" style="color: #e77707;"></i></a>
+                <a href=""><i class="fa-brands fa-snapchat" style="color: #e77707;"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter" style="color: #e77707;"></i></a>
+            </div>
+
+        </div>
+
+        <div class="footer-copy-right">
+            <p>Copyright © 2025 All rights reserved | GULF BAY LOGISTICS </p>
+        </div>
+    </div>
 
     <div class="image-box">
         <img src="./assets/service-img/airbus-bgrm.png" alt="Airbus">
@@ -355,8 +401,8 @@
                 plane.classList.remove('fly-animation'); // reset animation
                 void plane.offsetWidth;                  // trigger reflow
                 plane.classList.add('fly-animation');   // start flying
-                planeSound.currentTime = 0;
-                planeSound.play().catch(err => console.log('Sound play failed:', err));
+                // planeSound.currentTime = 0;
+                // planeSound.play().catch(err => console.log('Sound play failed:', err));
 
                 hasFlown = true; // ensure animation + sound happens only once per hover
             }
