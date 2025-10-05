@@ -217,7 +217,7 @@
 .home-content h2 {
   font-size: 50px;
   font-weight: 800;
-  color: #e77707;
+  color: var(--primary-color);
   line-height: 1.2;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
   animation: fadeInUp 1s ease-in-out;
@@ -317,7 +317,7 @@
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid #e78f0a;
+  border: 1px solid var(--primary-color);
   padding: 4px 12px;
   border-radius: 4px;
   margin-bottom: 15px;
@@ -363,7 +363,7 @@
 
 .about-btn {
   display: inline-block;
-  background: #e77707;
+  background: var(--primary-color);
   color: #fff;
   padding: 12px 22px;
   border-radius: 30px;
@@ -372,9 +372,9 @@
   transition: 0.3s ease;
 }
 
-.about-btn:hover {
+/* .about-btn:hover {
   background: #e78f0a;
-}
+} */
 
 .about-small-img {
   position: absolute;
@@ -478,7 +478,7 @@
 
 .view-btn button {
   display: inline-block;
-  background: #e77707;
+  background: var(--primary-color);
   color: #fff;
   padding: 12px 22px;
   border-radius: 30px;
@@ -489,7 +489,7 @@
 }
 
 .view-btn button:hover {
-  background-color: #e78f0a;
+  background-color: var(--primary-color);
   cursor: pointer;
 }
 
@@ -537,7 +537,7 @@
 
 .suppor-contact-btn {
   display: inline-block;
-  background: rgb(231, 119, 7);
+  background: var(--primary-color);
   color: #fff;
   padding: 12px 22px;
   border-radius: 30px;
@@ -545,21 +545,21 @@
   text-decoration: none;
   transition: 0.3s ease;
   border: none;
+  cursor: pointer;
+
 }
 
-.suppor-contact-btn:hover {
+
+/* .suppor-contact-btn:hover {
   background-color: #e78f0a;
   cursor: pointer;
-}
+} */
 
 @media (max-width:600px) {
   .support-content {
     font-size: 20px;
   }
 }
-
-
-/* ---------------------------------------------------------- marquee -------------------------------------------- */
 
 
 
