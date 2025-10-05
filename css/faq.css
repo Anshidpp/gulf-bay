@@ -48,7 +48,7 @@
 }
 
 .faq-question {
-  padding: 20px;
+  padding: 8px;
   background-color: var(--bg-color);
   cursor: pointer;
   display: flex;
