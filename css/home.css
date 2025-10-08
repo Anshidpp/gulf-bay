@@ -151,6 +151,7 @@
   padding: 10px 0;
   z-index: 999;
   gap: 10px !important;
+  transition: 1s ease-in-out;
 }
 
 .dropdown-menu li {
@@ -567,8 +568,8 @@
     position: relative;
     width: 20rem;
     height: 15rem;
-    top: 180px;
-    left: 0;
+    top: 250px;
+    left: -20px;
 }
 
 .service-content-right {
