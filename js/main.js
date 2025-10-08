@@ -1,5 +1,3 @@
-// ..... Responsive navbar ............
-
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger i");
   const mobileMenu = document.querySelector(".mobile-menu");
@@ -9,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mobile menu toggle
   hamburger.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
-
     hamburger.classList.add("rotate");
 
     setTimeout(() => {
@@ -33,6 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.classList.remove("scrolled");
       logo.src = "./assets/logo-img/LOGO2.png"; // default logo
     }
+  });
+
+  // Mobile dropdown toggle
+  const mobileDropdown = document.querySelector(".mobile-dropdown span");
+  const mobileDropdownMenu = document.querySelector(".mobile-dropdown-menu");
+
+  mobileDropdown.addEventListener("click", () => {
+    mobileDropdownMenu.classList.toggle("active");
+    mobileDropdown.querySelector("i").classList.toggle("fa-chevron-up");
+    mobileDropdown.querySelector("i").classList.toggle("fa-chevron-down");
   });
 });
 

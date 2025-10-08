@@ -58,7 +58,7 @@
 }
 
 .hamburger i {
-    font-size: 28px;
+    font-size: 25px;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
     /* animate rotation + fade */
@@ -123,10 +123,107 @@
     cursor: pointer;
 }
 
+/* ---------------- Dropdown Menu ---------------- */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  min-width: 200px;
+  display: none !important;
+  flex-direction: column;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  z-index: 999;
+  gap: 10px !important;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  
+}
+
+.dropdown-menu li:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.dropdown-menu a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex !important;
+}
+
+/* Adjust arrow color when navbar scrolled */
+.nav-main.scrolled .dropdown > a {
+  color: black;
+}
+
+/* ------------- Mobile Dropdown ------------- */
+.mobile-dropdown {
+  margin-top: 20px;
+}
+
+.mobile-dropdown span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+
+.mobile-dropdown-menu {
+  display: none;
+  list-style: none;
+  margin-left: 30px;
+  /* margin-top: 10px; */
+}
+
+.mobile-dropdown-menu.active {
+  display: block;
+}
+
+.mobile-dropdown-menu li {
+  margin: 10px 0;
+  font-size: 15px !important;
+}
+
+.mobile-dropdown-menu a {
+  color: white;
+  text-decoration: none;
+}
+
 
 /* Active state */
 
-@media (max-width: 750px) {
+@media (max-width:925px) {
+    .nav-pages{
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 900px) {
     .nav-pages {
         display: none;
         /* hide desktop nav */
@@ -246,7 +343,7 @@
 
 @media (max-width:900px) {
     .home-main {
-        height: 100vh;
+        height: 90vh;
         max-height: none;
     }
     .home-content {
