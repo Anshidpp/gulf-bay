@@ -44,6 +44,40 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// ----- Dropdown open/close -----
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+  dropdownLinks.forEach(link => {
+    const menu = link.nextElementSibling;
+    const icon = link.querySelector("i");
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Close all other dropdowns
+      document.querySelectorAll(".dropdown-menu").forEach(m => {
+        if (m !== menu) m.classList.remove("active");
+      });
+      document.querySelectorAll(".dropdown > a i").forEach(ic => {
+        if (ic !== icon) ic.classList.remove("rotated");
+      });
+
+      // Toggle this one
+      menu.classList.toggle("active");
+      icon.classList.toggle("rotated");
+    });
+  });
+
+  // Close dropdowns if clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-menu").forEach(m => m.classList.remove("active"));
+      document.querySelectorAll(".dropdown > a i").forEach(ic => ic.classList.remove("rotated"));
+    }
+  });
+});
+
 
 
 // ..... auto carousel ............
