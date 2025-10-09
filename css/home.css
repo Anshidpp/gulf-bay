@@ -123,6 +123,64 @@
     cursor: pointer;
 }
 
+/* ---------- Desktop Dropdown ---------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown a{
+    color: white;
+    
+}
+.nav-main.scrolled .dropdown a{
+    color: #000;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  list-style: none;
+  padding: 10px 0;
+  display: none;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-menu a{
+    color: #000;
+    font-size: 14px;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li:hover {
+  background: #f2f2f2;
+}
+
+/* ---------- Mobile Dropdown ---------- */
+.mobile-dropdown-menu {
+  display: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.mobile-dropdown-menu.active {
+  display: block;
+}
+
+.mobile-dropdown span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 /* Active state */
 

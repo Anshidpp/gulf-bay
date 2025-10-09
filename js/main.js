@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".nav-main");
   const logo = document.querySelector(".nav-logo img");
 
-  // Mobile menu toggle
+  // ----------------- Mobile menu toggle -----------------
   hamburger.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
     hamburger.classList.add("rotate");
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
   });
 
-  // Nav Scroll effect
+  // ----------------- Navbar Scroll Effect -----------------
   window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
       navbar.classList.add("scrolled");
@@ -32,51 +32,60 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Mobile dropdown toggle
+  // ----------------- Desktop Dropdown -----------------
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+
+  dropdown.addEventListener("mouseenter", () => {
+    dropdownMenu.style.display = "block";
+  });
+  dropdown.addEventListener("mouseleave", () => {
+    dropdownMenu.style.display = "none";
+  });
+
+  // ----------------- Mobile Dropdown -----------------
   const mobileDropdown = document.querySelector(".mobile-dropdown span");
   const mobileDropdownMenu = document.querySelector(".mobile-dropdown-menu");
 
   mobileDropdown.addEventListener("click", () => {
     mobileDropdownMenu.classList.toggle("active");
-    mobileDropdown.querySelector("i").classList.toggle("fa-chevron-up");
-    mobileDropdown.querySelector("i").classList.toggle("fa-chevron-down");
   });
 });
 
 
-// ----- Dropdown open/close -----
-document.addEventListener("DOMContentLoaded", () => {
-  const dropdownLinks = document.querySelectorAll(".dropdown > a");
+// // ----- Dropdown open/close -----
+// document.addEventListener("DOMContentLoaded", () => {
+//   const dropdownLinks = document.querySelectorAll(".dropdown > a");
 
-  dropdownLinks.forEach(link => {
-    const menu = link.nextElementSibling;
-    const icon = link.querySelector("i");
+//   dropdownLinks.forEach(link => {
+//     const menu = link.nextElementSibling;
+//     const icon = link.querySelector("i");
 
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
+//     link.addEventListener("click", (e) => {
+//       e.preventDefault();
 
-      // Close all other dropdowns
-      document.querySelectorAll(".dropdown-menu").forEach(m => {
-        if (m !== menu) m.classList.remove("active");
-      });
-      document.querySelectorAll(".dropdown > a i").forEach(ic => {
-        if (ic !== icon) ic.classList.remove("rotated");
-      });
+//       // Close all other dropdowns
+//       document.querySelectorAll(".dropdown-menu").forEach(m => {
+//         if (m !== menu) m.classList.remove("active");
+//       });
+//       document.querySelectorAll(".dropdown > a i").forEach(ic => {
+//         if (ic !== icon) ic.classList.remove("rotated");
+//       });
 
-      // Toggle this one
-      menu.classList.toggle("active");
-      icon.classList.toggle("rotated");
-    });
-  });
+//       // Toggle this one
+//       menu.classList.toggle("active");
+//       icon.classList.toggle("rotated");
+//     });
+//   });
 
-  // Close dropdowns if clicking outside
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".dropdown")) {
-      document.querySelectorAll(".dropdown-menu").forEach(m => m.classList.remove("active"));
-      document.querySelectorAll(".dropdown > a i").forEach(ic => ic.classList.remove("rotated"));
-    }
-  });
-});
+//   // Close dropdowns if clicking outside
+//   document.addEventListener("click", (e) => {
+//     if (!e.target.closest(".dropdown")) {
+//       document.querySelectorAll(".dropdown-menu").forEach(m => m.classList.remove("active"));
+//       document.querySelectorAll(".dropdown > a i").forEach(ic => ic.classList.remove("rotated"));
+//     }
+//   });
+// });
 
 
 
