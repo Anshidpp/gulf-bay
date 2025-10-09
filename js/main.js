@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
 // // ----- Dropdown open/close -----
 // document.addEventListener("DOMContentLoaded", () => {
 //   const dropdownLinks = document.querySelectorAll(".dropdown > a");
@@ -147,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.querySelectorAll('.dropdown > a').forEach(dropdownLink => {
   dropdownLink.addEventListener('click', (e) => {
     e.preventDefault(); // prevent "#" navigation
-    
+
     const dropdownMenu = dropdownLink.nextElementSibling;
 
     // Close other dropdowns first (optional)
