@@ -99,3 +99,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Select all dropdowns (in case you add more later)
+document.querySelectorAll('.dropdown > a').forEach(dropdownLink => {
+  dropdownLink.addEventListener('click', (e) => {
+    e.preventDefault(); // prevent "#" navigation
+    
+    const dropdownMenu = dropdownLink.nextElementSibling;
+
+    // Close other dropdowns first (optional)
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      if (menu !== dropdownMenu) {
+        menu.classList.remove('active');
+      }
+    });
+
+    // Toggle current dropdown
+    dropdownMenu.classList.toggle('active');
+
+    // Optional: rotate arrow icon
+    const icon = dropdownLink.querySelector('i');
+    icon.classList.toggle('rotated');
+  });
+});
+
+// Close dropdown if clicked outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('active'));
+    document.querySelectorAll('.dropdown > a i').forEach(icon => icon.classList.remove('rotated'));
+  }
+});
+
