@@ -16,7 +16,6 @@
 }
 
 
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -121,7 +120,9 @@
     background-color: var(--primary-color);
     color: white;
 }
-
+.container{
+    padding: 10px;
+}
 .container_specification {
     background-color: white;
     border-radius: 10px;
