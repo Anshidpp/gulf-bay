@@ -254,3 +254,15 @@ footer {
         overflow-x: auto;
     }
 }
+
+@media (max-width: 400px) {
+    .container-hero__title{
+        font-size: 3rem;
+    }
+    .section-title-container{
+        font-size: 1.5rem;
+    }
+    .spec_title{
+        font-size: 1.5rem;
+    }
+}
