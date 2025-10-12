@@ -790,7 +790,7 @@ ul.dropdown-menu {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr;
     gap: 60px;
     align-items: center;
 }
@@ -828,7 +828,7 @@ ul.dropdown-menu {
 
 .stats-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     margin-top: 50px;
 }

@@ -176,3 +176,43 @@ document.addEventListener('click', (e) => {
   }
 });
 
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll('.stat-number');
+  let hasAnimated = false;
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const speed = 30; // smaller = faster
+      let count = 0;
+
+      const updateCount = () => {
+        const increment = Math.ceil(target / 100); // smooth steps
+        if (count < target) {
+          count += increment;
+          counter.textContent = count > target ? `${target}+` : `${count}+`;
+          setTimeout(updateCount, speed);
+        } else {
+          counter.textContent = `${target}+`;
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimated) {
+        hasAnimated = true;
+        animateCounters();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(document.querySelector('.stats-container'));
+});
+
