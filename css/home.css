@@ -315,7 +315,7 @@ ul.dropdown-menu {
 
 @media (max-width:900px) {
     .home-main {
-        height: 90vh;
+        height: 70vh;
         max-height: none;
     }
 
