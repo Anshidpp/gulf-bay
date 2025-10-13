@@ -828,9 +828,10 @@ ul.dropdown-menu {
 
 .stats-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     margin-top: 50px;
+    /* background-color: yellowgreen; */
 }
 
 .stat-item {
@@ -983,4 +984,14 @@ ul.dropdown-menu {
         padding: 15px 25px;
         font-size: 1.1rem;
     }
+}
+
+
+/* -------------------------------------------------------------- Map ------------------------------------------------------- */
+
+.map-main{
+    width: 100%;
+    height: 500px;
+    padding-top: 50px;
+    /* background-color: wheat; */
 }
