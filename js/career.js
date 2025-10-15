@@ -1,25 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const careerForm = document.getElementById('career-form');
 
-    careerForm.addEventListener('submit', function(e) {
+    careerForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Get form values
-        const name = document.getElementById('full-name').value;
-        const jobTitle = document.getElementById('job-title').value;
-        const email = document.getElementById('email').value;
+        const formData = new FormData(this);
 
-        // Validate form
-        if (!validateForm()) {
-            return;
-        }
-
-        // Show success message
-        showSuccessMessage(name, jobTitle);
-
-        // Reset form
-        this.reset();
+        fetch('api/career_form_mail.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(data => {
+                if (data.trim() === 'success') {
+                    showSuccessMessage(
+                        document.getElementById('full-name').value,
+                        document.getElementById('job-title').value
+                    );
+                    this.reset();
+                } else {
+                    alert('There was a problem sending your application. Please try again.');
+                }
+            })
+            .catch(() => alert('Failed to send form. Please try again later.'));
     });
+
 
     // Form validation
     function validateForm() {
@@ -84,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Smooth scrolling for CTA button
-    document.querySelector('.career-cta').addEventListener('click', function(e) {
+    document.querySelector('.career-cta').addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         target.scrollIntoView({
@@ -97,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Toggle dropdown on click (works for touch devices). Put this near the end of body or in your script file.
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     const clickedDropBtn = e.target.closest('.dropdown .dropbtn');
 
     // If clicked the dropdown's button -> toggle only that dropdown
