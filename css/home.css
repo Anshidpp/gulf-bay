@@ -1262,6 +1262,9 @@ ul.dropdown-menu {
         right: 5%;
         bottom: 10%;
       }
+      .luxury_car{
+        flex-direction: column;
+      }
       .luxury_car-side img {
         display: none;
        
