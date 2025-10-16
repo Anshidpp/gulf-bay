@@ -1149,7 +1149,7 @@ ul.dropdown-menu {
 
 
 
-.map-main{
+.map-main {
     width: 100%;
     height: 500px;
     padding-top: 50px;
@@ -1158,132 +1158,145 @@ ul.dropdown-menu {
 
 
 .luxury_car {
-      position: relative;
-      height: 85vh;
-      width: 100%;
-      background: url('../assets/sub-img/luxury_car.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      padding: 0 8%;
-      overflow: hidden;
-    }
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    background: url('../assets/sub-img/luxury_car.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    overflow: hidden;
+}
 
-    .luxury_car::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 1;
-    }
+.luxury_car::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
 
-    .luxury_car-content {
-      position: relative;
-      z-index: 2;
-      max-width: 650px;
-    }
+.luxury_car-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
 
-    .luxury_car-content h5 {
-      text-transform: uppercase;
-      font-size: 16px;
-      color: white;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
+.luxury_car-content h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
 
+.luxury_car-content h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.luxury_car-content p {
+    font-size: 18px;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.luxury_car-side {
+    position: absolute;
+    right: 8%;
+    bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    z-index: 2;
+}
+
+.luxury_car-side img {
+    display: block;
+    width: 300px;
+    height: 170px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.luxury_car-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffeb00;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.luxury_car-btn:hover {
+    background-color: #ffee33;
+    transform: translateY(-2px);
+}
+
+.luxury_car-btn span {
+    background: #000;
+    color: #ffeb00;
+    border-radius: 50%;
+    padding: 4px 8px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+@media (max-width: 1120px) {
+    .luxury_car-side img {
+        display: none;
+
+    }
+}
+@media (max-width: 900px) {
     .luxury_car-content h1 {
-      font-size: 60px;
-      line-height: 1.2;
-      font-weight: 800;
-      margin-bottom: 25px;
-      color: white;
-    }
-
-    .luxury_car-content p {
-      font-size: 18px;
-      color: #f0f0f0;
-      line-height: 1.6;
+        font-size: 45px;
     }
 
     .luxury_car-side {
-      position: absolute;
-      right: 8%;
-      bottom: 15%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 15px;
-      z-index: 2;
+        right: 5%;
+        bottom: 10%;
+    }
+
+    .luxury_car {
+        flex-direction: column;
     }
 
     .luxury_car-side img {
-        display: block;
-      width: 300px;
-      height: 170px;
-      border-radius: 15px;
-      object-fit: cover;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    }
-
-    .luxury_car-btn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #ffeb00;
-      color: #000;
-      font-weight: 600;
-      font-size: 18px;
-      border: none;
-      border-radius: 12px;
-      padding: 12px 25px;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .luxury_car-btn:hover {
-      background-color: #ffee33;
-      transform: translateY(-2px);
-    }
-
-    .luxury_car-btn span {
-      background: #000;
-      color: #ffeb00;
-      border-radius: 50%;
-      padding: 4px 8px;
-      margin-left: 10px;
-      font-weight: bold;
-    }
-
-    @media (max-width: 900px) {
-      .luxury_car-content h1 {
-        font-size: 45px;
-      }
-      .luxury_car-side {
-        right: 5%;
-        bottom: 10%;
-      }
-      .luxury_car{
-        flex-direction: column;
-      }
-      .luxury_car-side img {
         display: none;
-       
-      }
+
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .luxury_car {
+        padding: 0 5%;
     }
 
-    @media (max-width: 600px) {
-      .luxury_car {
-        padding: 0 5%;
-      }
-      .luxury_car-content h1 {
+    .luxury_car-content h1 {
         font-size: 36px;
-      }
-      .luxury_car-content p {
+    }
+
+    .luxury_car-content p {
         font-size: 16px;
-      }
-      .luxury_car-side {
+    }
+
+    .luxury_car-side {
         position: static;
         margin-top: 30px;
         align-items: flex-start;
-      }
     }
+}
